@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/home/daniil/cpp/Otus_async_server/build",
+  "command": "/usr/bin/g++ -Dasync_EXPORTS  -g -fPIC -std=gnu++17 -o CMakeFiles/async.dir/async.cpp.o -c /home/daniil/cpp/Otus_async_server/async.cpp",
+  "file": "/home/daniil/cpp/Otus_async_server/async.cpp"
+},
+{
+  "directory": "/home/daniil/cpp/Otus_async_server/build",
+  "command": "/usr/bin/g++ -Dasync_EXPORTS  -g -fPIC -std=gnu++17 -o CMakeFiles/async.dir/State_machine.cpp.o -c /home/daniil/cpp/Otus_async_server/State_machine.cpp",
+  "file": "/home/daniil/cpp/Otus_async_server/State_machine.cpp"
+},
+{
+  "directory": "/home/daniil/cpp/Otus_async_server/build",
+  "command": "/usr/bin/g++  -I/home/daniil/cpp/Otus_async_server -g -Wall -Wextra -pedantic -std=gnu++17 -o CMakeFiles/bulk_server.dir/main.cpp.o -c /home/daniil/cpp/Otus_async_server/main.cpp",
+  "file": "/home/daniil/cpp/Otus_async_server/main.cpp"
+},
+{
+  "directory": "/home/daniil/cpp/Otus_async_server/build",
+  "command": "/usr/bin/g++  -I/home/daniil/cpp/Otus_async_server -isystem /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest/include -isystem /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest -g -Wall -Wextra -pedantic -std=gnu++17 -o CMakeFiles/lib_test.dir/tests/tests.cpp.o -c /home/daniil/cpp/Otus_async_server/tests/tests.cpp",
+  "file": "/home/daniil/cpp/Otus_async_server/tests/tests.cpp"
+},
+{
+  "directory": "/home/daniil/cpp/Otus_async_server/build/googletest/googlemock",
+  "command": "/usr/bin/g++  -I/home/daniil/cpp/Otus_async_server/GTEST_LINUX/googlemock/include -I/home/daniil/cpp/Otus_async_server/GTEST_LINUX/googlemock -isystem /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest/include -isystem /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googlemock/src/gmock-all.cc",
+  "file": "/home/daniil/cpp/Otus_async_server/GTEST_LINUX/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/daniil/cpp/Otus_async_server/build/googletest/googlemock",
+  "command": "/usr/bin/g++  -isystem /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googlemock/include -isystem /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googlemock -isystem /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest/include -isystem /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googlemock/src/gmock_main.cc",
+  "file": "/home/daniil/cpp/Otus_async_server/GTEST_LINUX/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/home/daniil/cpp/Otus_async_server/build/googletest/googletest",
+  "command": "/usr/bin/g++  -I/home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest/include -I/home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest/src/gtest-all.cc",
+  "file": "/home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/daniil/cpp/Otus_async_server/build/googletest/googletest",
+  "command": "/usr/bin/g++  -isystem /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest/include -isystem /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest/src/gtest_main.cc",
+  "file": "/home/daniil/cpp/Otus_async_server/GTEST_LINUX/googletest/src/gtest_main.cc"
+}
+]

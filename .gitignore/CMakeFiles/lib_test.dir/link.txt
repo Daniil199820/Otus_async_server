@@ -1,0 +1,1 @@
+/usr/bin/c++  -pthread -rdynamic CMakeFiles/lib_test.dir/tests/tests.cpp.o -o lib_test  -Wl,-rpath,/home/daniil/cpp/Otus_async_server/.gitignore lib/libgtest.a lib/libgtest_main.a libasync.so lib/libgtest.a 

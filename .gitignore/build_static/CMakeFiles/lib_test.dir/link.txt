@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/lib_test.dir/tests/tests.cpp.o -o lib_test  lib/libgtest.a lib/libgtest_main.a libasync.a lib/libgtest.a 

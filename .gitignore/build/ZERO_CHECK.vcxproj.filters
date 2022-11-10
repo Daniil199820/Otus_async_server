@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Otus_async_lib\build\CMakeFiles\3c02c7bc50475588f1c88cde96e94b5d\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{D0AC2EDA-528A-3818-BB81-054FCE2D2293}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

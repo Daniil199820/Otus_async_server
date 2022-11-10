@@ -1,0 +1,2 @@
+/usr/bin/ar qc libasync.a CMakeFiles/async.dir/async.cpp.o CMakeFiles/async.dir/State_machine.cpp.o
+/usr/bin/ranlib libasync.a

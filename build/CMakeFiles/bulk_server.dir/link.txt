@@ -1,0 +1,1 @@
+/usr/bin/g++ -g  -pthread -rdynamic CMakeFiles/bulk_server.dir/main.cpp.o -o bulk_server  -Wl,-rpath,/home/daniil/cpp/Otus_async_server/build: libasync.so 

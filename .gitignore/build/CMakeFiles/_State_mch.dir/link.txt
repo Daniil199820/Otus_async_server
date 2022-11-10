@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib_State_mch.a CMakeFiles/_State_mch.dir/State_machine.cpp.o
+/usr/bin/ranlib lib_State_mch.a
