@@ -6,7 +6,6 @@ set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 project(bulk VERSION ${PROJECT_VERSION})
 
 find_package( Boost COMPONENTS system REQUIRED )
-include_directories( ${Boost_INCLUDE_DIR} )
 
 set(INSTALL_GTEST OFF)
 
