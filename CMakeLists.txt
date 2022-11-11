@@ -29,6 +29,9 @@ set_target_properties(bulk_server async  lib_test PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
     PUBLIC_HEADER async.h
+)
+
+set_target_properties(bulk_server PROPERTIES
     COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
