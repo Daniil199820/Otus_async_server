@@ -5,6 +5,8 @@ set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 
 project(bulk VERSION ${PROJECT_VERSION})
 
+find_package( Boost COMPONENTS system REQUIRED )
+include_directories( ${Boost_INCLUDE_DIR} )
 
 set(INSTALL_GTEST OFF)
 
@@ -31,6 +33,7 @@ set_target_properties(bulk_server async  lib_test PROPERTIES
 
 target_link_libraries(bulk_server PRIVATE  
     async
+    ${Boost_LIBRARIES}
 )
 
 
@@ -38,6 +41,7 @@ target_include_directories(
     lib_test PRIVATE
    ${GTEST_INCLUDE_DIRS}
    ${CMAKE_CURRENT_SOURCE_DIR}
+   ${Boost_LIBRARIES}
 
 )
 
