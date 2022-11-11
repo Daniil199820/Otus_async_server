@@ -20,7 +20,11 @@ public:
         Logger_viewer = std::make_shared<Logger>(Store);
         Console_viewer = std::make_shared<CommandView>(Store,out);  
         Logger_viewer->SetContextName(this);
-    }
+  }
+
+  int get_status(){
+    return Command_prcer->get_status();
+  }
  
 
   void SetBuffer(const char* _Buffer, std::size_t _szSize){

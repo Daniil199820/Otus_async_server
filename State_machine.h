@@ -1,6 +1,11 @@
 #pragma once
 #include<memory>
 
+enum STATUS{
+    Static_status,
+    Dynamic_status
+};
+
 class Application;
 
 class ICommmandHandler{
@@ -9,6 +14,7 @@ public:
     virtual bool end(Application*)=0;
     virtual bool add_command(Application*)=0;
     virtual bool end_of_f(Application*)=0;
+    virtual int get_status(Application*)=0;
 };
 
 using ICommmandHandlerPtr = std::unique_ptr<ICommmandHandler>;
@@ -37,6 +43,10 @@ public:
         return counter;
     }
 
+    int get_current_status(){
+        return m_handler->get_status(this);
+    }
+
 private:
     ICommmandHandlerPtr m_handler;
     int counter;
@@ -52,6 +62,8 @@ public:
 
     bool end_of_f(Application* ) override;
 
+    int get_status(Application* ) override;
+
 private:
     int counter = 0;
 };
@@ -62,6 +74,7 @@ public:
     bool end(Application* app) override;
     bool end_of_f(Application*) override;
     bool add_command(Application*) override;
+    int get_status(Application* ) override;
     
 private:
     int counter =1;

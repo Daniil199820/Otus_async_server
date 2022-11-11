@@ -25,7 +25,6 @@ void receive(handle_t handle, const char *data, std::size_t size) {
   
 
   if (temp_Context) {
-   // std::cout << "set  buf in async";
     temp_Context->SetBuffer(data,size);
   }
 
@@ -37,6 +36,21 @@ void disconnect(handle_t handle) {
     if(iter!=map_contexts.end()){
       map_contexts.erase(iter);
     }
+}
+
+int get_status(handle_t handle ){
+  std::shared_ptr<Context> temp_Context;
+  
+  std::unique_lock<std::mutex> lock(contex_lock);
+    auto iter = map_contexts.find(handle);
+    if (iter != map_contexts.end()) {
+      temp_Context = iter->second;
+    }
+  
+  if (temp_Context) {
+    return temp_Context->get_status();
+  }
+  return 1; 
 }
 
 }

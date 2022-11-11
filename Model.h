@@ -47,7 +47,11 @@ public:
     void end_of_f(){
         if(!app->end_of_f()){
             store->pull_commands();
-            }
+        }
+    }
+
+    int get_status(){
+        return app.get()->get_current_status();    
     }
 
     CommandModel(int block_size, std::shared_ptr<Storage> store):store(store){

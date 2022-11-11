@@ -20,6 +20,10 @@ bool StaticState::end_of_f(Application*){
     return false;
 }
 
+int StaticState::get_status(Application*){
+    return Static_status;
+}
+
 bool DynamicState::begin(Application* ){
     ++counter;
     return true;
@@ -40,5 +44,9 @@ bool DynamicState::add_command(Application* app){
 
 bool DynamicState::end_of_f(Application*){
     return true;
+}
+
+int DynamicState::get_status(Application*){
+    return Dynamic_status;
 }
 

@@ -23,8 +23,8 @@ class session
   : public std::enable_shared_from_this<session>
 {
 public:
-  session(tcp::socket socket, std::size_t bulk_size_)
-    : socket_(std::move(socket)),sz(bulk_size_)
+  session(tcp::socket socket, std::size_t bulk_size_, void* handle)
+    : socket_(std::move(socket)),sz(std::move(bulk_size_)),handle(handle)
   {
   }
 
@@ -34,7 +34,7 @@ public:
 
   void start()
   {
-    handle = async::connect(sz);
+   // handle = async::connect(sz);
     do_read();
   }
 
@@ -51,6 +51,7 @@ private:
             if(ec == boost::asio::error::eof || ec == boost::asio::error::connection_reset){
               async::disconnect(handle);
             }
+
             async::receive(handle,data_,length);          
           }
         });
@@ -69,7 +70,6 @@ public:
   server(boost::asio::io_context& io_context, short port, std::size_t bulk_sz)
     : acceptor_(io_context, tcp::endpoint(tcp::v4(), port)),bulk_size_(bulk_sz)
   {
-    //auto h = async::connect(bulk_size_);
     do_accept();
   }
 
@@ -81,9 +81,10 @@ private:
         {
           if (!ec)
           {
-            //if(flag==false){
-            std::make_shared<session>(std::move(socket),bulk_size_)->start();
-            //}
+            if(async::get_status(handle)==1){
+                handle = async::connect(bulk_size_);
+            }
+            std::make_shared<session>(std::move(socket),bulk_size_,handle)->start();
           }
 
           do_accept();
