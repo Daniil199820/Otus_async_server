@@ -30,10 +30,6 @@ set_target_properties(bulk_server async  lib_test PROPERTIES
     CXX_STANDARD_REQUIRED ON
 )
 
-set_target_properties(bulk_server PROPERTIES
-    COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
-    INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
-)
 
 
 
@@ -52,6 +48,7 @@ target_include_directories(
 target_include_directories(
     bulk_server PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}
+    ${Boost_INCLUDE_DIR}
 )
 
 target_link_libraries(lib_test PRIVATE
