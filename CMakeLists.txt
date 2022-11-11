@@ -28,7 +28,10 @@ set_target_properties(bulk_server async  lib_test PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
     PUBLIC_HEADER async.h
+    COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
+    INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
+
 
 
 target_link_libraries(bulk_server PRIVATE  
@@ -41,8 +44,6 @@ target_include_directories(
     lib_test PRIVATE
    ${GTEST_INCLUDE_DIRS}
    ${CMAKE_CURRENT_SOURCE_DIR}
-   ${Boost_LIBRARIES}
-
 )
 
 target_include_directories(
