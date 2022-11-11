@@ -3,9 +3,9 @@ cmake_minimum_required(VERSION 3.2)
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 
-project(bulk VERSION ${PROJECT_VERSION})
+project(bulk_server VERSION ${PROJECT_VERSION})
 
-find_package( Boost COMPONENTS system REQUIRED )
+
 
 set(INSTALL_GTEST OFF)
 
@@ -13,6 +13,8 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pthread")
 
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/GTEST_LINUX" 
 "googletest")
+
+
 
 include(GNUInstallDirs)
 
