@@ -55,7 +55,9 @@ private:
                 async::receive(handle,ss.c_str(),ss.size());
                 ss.clear();
              }
-            do_read();          
+            do_read();
+            int x=0;
+            x=123;          
           }
         });
   }
