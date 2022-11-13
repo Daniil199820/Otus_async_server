@@ -34,7 +34,6 @@ public:
 
   void start()
   {
-    //handle = async::connect(sz);
     do_read();
   }
 
