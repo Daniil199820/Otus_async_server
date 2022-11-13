@@ -196,7 +196,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=bulk
+CMAKE_PROJECT_NAME:STATIC=bulk_server
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.0.1
@@ -305,6 +305,15 @@ bulk_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 bulk_SOURCE_DIR:STATIC=/home/daniil/cpp/Otus_async_server
+
+//Value Computed by CMake
+bulk_server_BINARY_DIR:STATIC=/home/daniil/cpp/Otus_async_server/.gitignore
+
+//Value Computed by CMake
+bulk_server_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+bulk_server_SOURCE_DIR:STATIC=/home/daniil/cpp/Otus_async_server
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/daniil/cpp/Otus_async_server/.gitignore/googletest/googlemock

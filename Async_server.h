@@ -34,7 +34,7 @@ public:
 
   void start()
   {
-   // handle = async::connect(sz);
+    //handle = async::connect(sz);
     do_read();
   }
 
@@ -47,20 +47,25 @@ private:
         {
           if (!ec)
           {
-            //std::cout << "receive " << length << "=" << std::string{data_, length} << std::endl;
             if(ec == boost::asio::error::eof || ec == boost::asio::error::connection_reset){
               async::disconnect(handle);
             }
 
-            async::receive(handle,data_,length);          
+             ss= ss + data_[0];
+             if(data_[0]=='\n'){
+                async::receive(handle,ss.c_str(),ss.size());
+                ss.clear();
+             }
+            do_read();          
           }
         });
   }
 
   tcp::socket socket_;
   enum { max_length = 1024 };
-  char data_[max_length];
+  char data_[1];
   void* handle;
+  std::string ss;
   std::size_t sz;
 };
 
@@ -70,7 +75,12 @@ public:
   server(boost::asio::io_context& io_context, short port, std::size_t bulk_sz)
     : acceptor_(io_context, tcp::endpoint(tcp::v4(), port)),bulk_size_(bulk_sz)
   {
+    handle = async::connect(bulk_size_);
     do_accept();
+  }
+
+  ~server(){
+    async::disconnect(handle);
   }
 
 private:
@@ -82,6 +92,7 @@ private:
           if (!ec)
           {
             if(async::get_status(handle)==1){
+                async::disconnect(handle);
                 handle = async::connect(bulk_size_);
             }
             std::make_shared<session>(std::move(socket),bulk_size_,handle)->start();
