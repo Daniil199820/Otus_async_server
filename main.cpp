@@ -16,6 +16,17 @@
     return 0;
 }
 */
+
+int to_integer(const char* arg){
+  try{
+    int temp = std::stoi(arg);
+  }
+  catch(const std::invalid_argument& inv_er){
+    throw std::logic_error("Argument is not an integer.");
+  }
+}
+
+
 int main(int argc, char* argv[])
 {
   try
@@ -30,12 +41,11 @@ int main(int argc, char* argv[])
 
     boost::asio::io_context io_context;
 
-    server server(io_context, std::atoi(argv[1]),std::atoi(argv[2]));
-
-    //  server server(io_context, 9000,3);
+    server server(io_context, to_integer(argv[1]),to_integer(argv[2]));
 
     io_context.run();
   }
+
   catch (const std::exception& ex)
   {
     std::cerr << "Exception: " << ex.what() << "\n";
