@@ -18,12 +18,14 @@
 */
 
 int to_integer(const char* arg){
+  int temp;
   try{
-    int temp = std::stoi(arg);
+     temp = std::stoi(arg);
   }
   catch(const std::invalid_argument& inv_er){
     throw std::logic_error("Argument is not an integer.");
   }
+  return temp;
 }
 
 
@@ -37,8 +39,6 @@ int main(int argc, char* argv[])
       return 1;
     }
   
-  
-
     boost::asio::io_context io_context;
 
     server server(io_context, to_integer(argv[1]),to_integer(argv[2]));
